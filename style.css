@@ -10,6 +10,7 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: #f3e5d7;
   color: #5c4033;
+
   min-height: 100vh;
 
   display: flex;
@@ -30,125 +31,71 @@ body {
   background-color: #ffffff;
   border-radius: calc(1rem + 0.5vw);
   overflow: hidden;
-
   width: min(100%, 46rem);
 }
 
 .recipe__image {
-  display: block;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  display: block;
 }
 
 .recipe__body {
   padding: clamp(1.5rem, 3vw, 2.5rem);
-
   display: flex;
   flex-direction: column;
-
-  gap: calc(1rem + 1vw);
+  gap: 2rem;
 }
 
 .recipe__title {
   font-family: "Young Serif", serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 400;
   color: #312820;
-  line-height: 1.2;
-
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
 }
 
 .recipe__description {
   font-size: clamp(0.9rem, 1vw, 1rem);
-  line-height: calc(1.4 + 0.3);
-  color: #5c4033;
-
-  margin-block-start: calc(-0.5rem - 0.2vw);
-}
-
-.recipe__divider {
-  border: none;
-  border-block-start: 1px solid #e8d5c4;
+  line-height: 1.6;
 }
 
 .recipe__heading {
   font-family: "Young Serif", serif;
-  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
   color: #7a3b2e;
+}
 
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-
-  margin-block-end: calc(0.5rem + 0.5vw);
+.recipe__divider {
+  border: none;
+  border-top: 1px solid #e8d5c4;
 }
 
 .recipe__list {
-  padding-inline-start: calc(1rem + 0.5vw);
-
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
-
-  gap: calc(0.35rem + 0.2vw);
-
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  line-height: calc(1.4 + 0.3);
-
-  color: #5c4033;
+  gap: 0.5rem;
+  line-height: 1.6;
 }
 
 .recipe__list--ordered {
-  gap: calc(0.5rem + 0.3vw);
-}
-
-.recipe__list--ordered li {
-  padding-inline-start: calc(0.25rem + 0.25vw);
-}
-
-.recipe__nutrition-note {
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
-  color: #5c4033;
-  line-height: calc(1.4 + 0.2);
-
-  margin-block-end: calc(0.75rem + 0.3vw);
+  gap: 0.75rem;
 }
 
 .prep {
   background-color: #fdf3f0;
-
-  border-radius: calc(0.5rem + 0.25vw);
-
-  padding: clamp(1rem, 2vw, 1.5rem);
-}
-
-.prep__title {
-  font-family: "Outfit", sans-serif;
-
-  font-size: clamp(1rem, 2vw, 1.1rem);
-
-  font-weight: 700;
-
-  color: #7a3b2e;
-
-  margin-block-end: calc(0.5rem + 0.25vw);
-}
-
-.prep__list {
-  padding-inline-start: calc(1rem + 0.5vw);
-
-  display: flex;
-  flex-direction: column;
-
-  gap: calc(0.3rem + 0.1vw);
-
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
-
-  line-height: calc(1.4 + 0.2);
-
-  color: #5c4033;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
 }
 
 .prep__label {
   font-weight: 700;
+}
+
+.prep__list {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .nutrition {
@@ -159,58 +106,42 @@ body {
 .nutrition__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  border-block-end: 1px solid #e8d5c4;
-
-  padding: 0.75rem calc(1rem + 1vw);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e8d5c4;
 }
 
 .nutrition__row:last-child {
-  border-block-end: none;
+  border-bottom: none;
 }
 
 .nutrition__label {
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
-  color: #5c4033;
+  font-size: 0.9rem;
 }
 
 .nutrition__value {
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
   font-weight: 700;
   color: #7a3b2e;
 }
 
-.attribution {
-  margin-block-start: calc(1rem + 0.5vw);
-
-  font-size: clamp(0.7rem, 1vw, 0.8rem);
-
-  color: #5c4033;
-
-  text-align: center;
-}
-
+/* Accessibility fix for links */
 .attribution a {
   color: #7a3b2e;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
 }
 
 .attribution a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-@media (min-width: 40em) {
-  .recipe {
-    border-radius: calc(1rem + 0.5vw);
-  }
-
-  .recipe__image {
-    max-height: 18rem;
-    object-fit: cover;
-  }
+.attribution a:focus-visible {
+  outline: 2px solid #7a3b2e;
+  outline-offset: 3px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  a {
-    transition: color 0.2s ease;
-  }
+
+.attribution {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
 }

@@ -28,7 +28,7 @@ This is my solution to the [Recipe page challenge](https://www.frontendmentor.io
 
 ### Links
 
-- Solution URL: https://www.frontendmentor.io/profile/yourusername
+- Solution URL: https://www.frontendmentor.io/profile/levilex-kilobytes
 - Live Site URL: https://your-live-site-url.com
 
 ---
