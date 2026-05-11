@@ -41,8 +41,6 @@ This is my solution to the [Recipe page challenge](https://www.frontendmentor.io
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- Responsive design using `clamp()`, `calc()`, and `min()`
 
 ---
 
@@ -52,23 +50,9 @@ This project helped me improve my understanding of responsive layouts and modern
 
 I practiced using:
 
-- `clamp()` for fluid typography and spacing
-- `calc()` for dynamic sizing
-- `min()` for responsive widths
-- Mobile-first responsive design techniques
+-BEM
+
 - Semantic HTML structure
-
-Example:
-
-```css
-.recipe {
-  width: min(100%, 46rem);
-}
-
-.recipe__title {
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-}
-```
 
 I also learned how to create cleaner layouts with reusable CSS patterns.
 
@@ -78,7 +62,6 @@ I also learned how to create cleaner layouts with reusable CSS patterns.
 
 In future projects, I want to continue improving:
 
-- Responsive design skills
 - Accessibility best practices
 - CSS architecture and organization
 - Advanced layout techniques
