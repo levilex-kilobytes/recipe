@@ -37,6 +37,7 @@ body {
 .recipe__image {
   width: 100%;
   display: block;
+  height: 250px;
 }
 
 .recipe__body {
