@@ -10,14 +10,11 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: #f3e5d7;
   color: #5c4033;
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 2rem;
 }
 
@@ -30,7 +27,6 @@ body {
 .recipe {
   background-color: #ffffff;
   border-radius: 1.25rem;
-  overflow: hidden;
   width: min(100%, 46rem);
 }
 
@@ -125,7 +121,7 @@ body {
 }
 
 .attribution a {
-  color: #7a3b2e;
+  color: blueviolet;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
@@ -136,7 +132,7 @@ body {
 }
 
 .attribution a:focus-visible {
-  outline: 2px solid #7a3b2e;
+  outline: 2px solid #3f3532;
   outline-offset: 3px;
 }
 
